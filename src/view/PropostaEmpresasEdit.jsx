@@ -26,18 +26,18 @@ function PropostaEmpresasEdit() {
   useEffect(() => {
     // Buscar dados para preencher selects
     axios
-      .get("http://localhost:3000/tiposproposta/list")
+      .get("https://backendai2.onrender.com/tiposproposta/list")
       .then((res) => setTipos(res.data));
     axios
-      .get("http://localhost:3000/regimes/list")
+      .get("https://backendai2.onrender.com/regimes/list")
       .then((res) => setRegimes(res.data));
     axios
-      .get("http://localhost:3000/modalidades/list")
+      .get("https://backendai2.onrender.com/modalidades/list")
       .then((res) => setModalidades(res.data));
 
     // Buscar dados da proposta a editar
     axios
-      .get(`http://localhost:3000/propostas/get/${id}`)
+      .get(`https://backendai2.onrender.com/propostas/get/${id}`)
       .then((res) => {
         if (res.data.success) {
           // Preencher form com dados recebidos
@@ -74,7 +74,7 @@ function PropostaEmpresasEdit() {
 
     // Atualizar proposta via PUT ou POST (conforme backend)
     axios
-      .put(`http://localhost:3000/propostas/update/${id}`, form)
+      .put(`https://backendai2.onrender.com/propostas/update/${id}`, form)
       .then(() => navigate("/propostas/list"))
       .catch((err) => console.error("Erro ao atualizar proposta:", err));
   };

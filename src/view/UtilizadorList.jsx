@@ -19,7 +19,7 @@ const UtilizadorList = () => {
   }, []);
 
   function LoadUtilizadores() {
-    const url = "http://localhost:3000/utilizadores/list";
+    const url = "https://backendai2.onrender.com/utilizadores/list";
     console.log("Header enviado:", authHeader());
 
     axios
@@ -42,7 +42,7 @@ const UtilizadorList = () => {
 
   const carregarUtilizadores = () => {
     axios
-      .get("http://localhost:3000/utilizadores/list")
+      .get("https://backendai2.onrender.com/utilizadores/list")
       .then((res) => {
         if (res.data.success) {
           setUtilizadores(res.data.data);
@@ -74,7 +74,7 @@ const UtilizadorList = () => {
 
   function SendDelete(id_utilizadores) {
     // url do backend
-    const baseUrl = "http://localhost:3000/utilizadores/delete";
+    const baseUrl = "https://backendai2.onrender.com/utilizadores/delete";
     // network
     axios
       .post(baseUrl, { headers: authHeader(), id: id_utilizadores })

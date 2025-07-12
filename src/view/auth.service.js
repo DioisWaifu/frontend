@@ -3,7 +3,7 @@ import axios from "axios";
 class AuthService {
   login(email, senha) {
     return axios
-      .post("http://localhost:3000/utilizadores/login", { email, senha })
+      .post("https://backendai2.onrender.com/utilizadores/login", { email, senha })
       .then((res) => {
         if (res.data && res.data.token && res.data.role && res.data.id_utilizadores) {
           // Guarda tudo, incluindo o email se quiseres

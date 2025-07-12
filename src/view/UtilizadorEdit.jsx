@@ -35,25 +35,25 @@ function UtilizadorEdit() {
   useEffect(() => {
     // Carregar listas para selects
     axios
-      .get("http://localhost:3000/tiposdeutilizador/list")
+      .get("https://backendai2.onrender.com/tiposdeutilizador/list")
       .then((res) => setTipos(res.data.data || []));
     axios
-      .get("http://localhost:3000/gestores/list")
+      .get("https://backendai2.onrender.com/gestores/list")
       .then((res) => setGestores(res.data.data || []));
     axios
-      .get("http://localhost:3000/departamentos/list")
+      .get("https://backendai2.onrender.com/departamentos/list")
       .then((res) => setDepartamentos(res.data.data || []))
       .catch(() => setDepartamentos([]));
     axios
-      .get("http://localhost:3000/empresas/list")
+      .get("https://backendai2.onrender.com/empresas/list")
       .then((res) => setEmpresas(res.data.data || []));
     axios
-      .get("http://localhost:3000/candidatos/list")
+      .get("https://backendai2.onrender.com/candidatos/list")
       .then((res) => setCandidatos(res.data.data || []));
 
     // Carregar dados do utilizador a editar
     axios
-      .get(`http://localhost:3000/utilizadores/get/${id}`)
+      .get(`https://backendai2.onrender.com/utilizadores/get/${id}`)
       .then((res) => {
         if (res.data.success) {
           const data = res.data.data;
@@ -165,7 +165,7 @@ function UtilizadorEdit() {
     }
 
     axios
-      .put(`http://localhost:3000/utilizadores/update/${id}`, form)
+      .put(`https://backendai2.onrender.com/utilizadores/update/${id}`, form)
       .then(() => navigate("/utilizadores/list"))
       .catch((err) => {
         console.error("Erro ao atualizar utilizador:", err);

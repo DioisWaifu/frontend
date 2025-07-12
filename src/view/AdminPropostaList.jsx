@@ -50,7 +50,7 @@ export default function PropostasPageAdmin() {
 
   const carregarPropostas = () => {
     axios
-      .get("http://localhost:3000/propostas/list")
+      .get("https://backendai2.onrender.com/propostas/list")
       .then((res) => {
         if (res.data.success) {
           const propostasConvertidas = res.data.data.map((p) => ({
@@ -75,7 +75,7 @@ export default function PropostasPageAdmin() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .post("http://localhost:3000/propostas/delete", { id })
+          .post("https://backendai2.onrender.com/propostas/delete", { id })
           .then(() => {
             Swal.fire(
               "Eliminada!",
@@ -94,7 +94,7 @@ export default function PropostasPageAdmin() {
   const onToggleEstado = (p) => {
     const novoEstado = p.estado === "activa" ? false : true;
     axios
-      .put(`http://localhost:3000/propostas/update/${p.id_propostas}`, {
+      .put(`https://backendai2.onrender.com/propostas/update/${p.id_propostas}`, {
         ...p,
         estado: novoEstado,
       })

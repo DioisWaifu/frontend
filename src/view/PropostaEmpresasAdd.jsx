@@ -32,13 +32,13 @@ function PropostaEmpresasAdd() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/tiposproposta/list")
+      .get("https://backendai2.onrender.com/tiposproposta/list")
       .then((res) => setTipos(res.data));
     axios
-      .get("http://localhost:3000/regimes/list")
+      .get("https://backendai2.onrender.com/regimes/list")
       .then((res) => setRegimes(res.data));
     axios
-      .get("http://localhost:3000/modalidades/list")
+      .get("https://backendai2.onrender.com/modalidades/list")
       .then((res) => setModalidades(res.data));
   }, []);
 
@@ -68,7 +68,7 @@ function PropostaEmpresasAdd() {
     e.preventDefault();
     console.log("Dados a enviar:", form); // Debug
     axios
-      .post("http://localhost:3000/propostas/create", form)
+      .post("https://backendai2.onrender.com/propostas/create", form)
       .then(() => navigate("/empresa/list"))
       .catch((err) => console.error("Erro ao adicionar proposta:", err));
   };

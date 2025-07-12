@@ -24,7 +24,7 @@ const Candidatos = () => {
 
   const carregarFiltrarPropostas = () => {
     axios
-      .get("http://localhost:3000/propostas/list")
+      .get("https://backendai2.onrender.com/propostas/list")
       .then((res) => {
         if (res.data.success) {
           let propostasFiltradas = res.data.data.filter(

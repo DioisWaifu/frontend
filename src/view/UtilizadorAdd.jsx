@@ -33,22 +33,22 @@ function UtilizadorAdd() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/tiposdeutilizador/list")
+      .get("https://backendai2.onrender.com/tiposdeutilizador/list")
       .then((res) => setTipos(res.data.data || []))
       .catch(() => setTipos([]));
 
     axios
-      .get("http://localhost:3000/gestores/list")
+      .get("https://backendai2.onrender.com/gestores/list")
       .then((res) => setGestores(res.data.data || []))
       .catch(() => setGestores([]));
 
     axios
-      .get("http://localhost:3000/empresas/list")
+      .get("https://backendai2.onrender.com/empresas/list")
       .then((res) => setEmpresas(res.data.data || []))
       .catch(() => setEmpresas([]));
 
     axios
-      .get("http://localhost:3000/candidatos/list")
+      .get("https://backendai2.onrender.com/candidatos/list")
       .then((res) => setCandidatos(res.data.data || []))
       .catch(() => setCandidatos([]));
   }, []);
@@ -97,7 +97,7 @@ if (form.id_tipo_de_utilizadores === "1" && form.diplomado === undefined) {
     }
 
     axios
-      .post("http://localhost:3000/utilizadores/create", form)
+      .post("https://backendai2.onrender.com/utilizadores/create", form)
       .then(() => navigate("/utilizadores"))
       .catch((err) => {
         console.error("Erro ao adicionar utilizador:", err);
