@@ -26,15 +26,15 @@ function PropostaEmpresasAdd() {
     prazo_de_candidaturas: "",
     estado: false,
   });
-};
+}
 
- const competenciasDisponiveis = [
-    { id: 1, nome: "JavaScript" },
-    { id: 2, nome: "BootStrap" },
-    { id: 3, nome: "Adobe Photoshop" },
-    { id: 4, nome: "Adobe Illustrator" },
-    { id: 5, nome: "Adobe Premiere" },
-  ];
+const competenciasDisponiveis = [
+  { id: 1, nome: "JavaScript" },
+  { id: 2, nome: "BootStrap" },
+  { id: 3, nome: "Adobe Photoshop" },
+  { id: 4, nome: "Adobe Illustrator" },
+  { id: 5, nome: "Adobe Premiere" },
+];
 export default function PropostasPageAdmin() {
   const [propostas, setPropostas] = useState([]);
   const [filtro, setFiltro] = useState("activa");
@@ -187,16 +187,16 @@ export default function PropostasPageAdmin() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/propostas/remover">
+              <Link className="nav-link" to="/RemoverContas/admin">
                 Pedido de remoção de estudante
               </Link>
             </li>
-          
-          <li className="nav-item">
-            <Link className="nav-link text-danger" to="/">
-              Terminar sessão
-            </Link>
-          </li>
+
+            <li className="nav-item">
+              <Link className="nav-link text-danger" to="/">
+                Terminar sessão
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -310,7 +310,6 @@ export default function PropostasPageAdmin() {
                     <strong>Validade:</strong>{" "}
                     {propostaAtiva.prazo_de_candidaturas || "—"}
                   </p>
-
 
                   <div className="d-flex gap-2 mt-3">
                     {/* ATIVAS: Editar + Eliminar */}
