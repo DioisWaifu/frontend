@@ -1,0 +1,282 @@
+
+/*GRADIANTE*/
+.btn-gradiente {
+  background: linear-gradient(
+    90deg,
+    rgba(76, 186, 123, 1) 0%,
+    rgba(31, 149, 136, 1) 70%
+  );
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.btn-gradiente:hover {
+  color: white;
+}
+
+.bg-light-gradient {
+  background: #4CBA7B;
+}
+
+.cut-overflow {
+  word-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container_gradiente_delete {
+  background: linear-gradient(
+    90deg,
+    rgba(186, 76, 76, 1) 0%,
+    rgba(149, 31, 31, 1) 70%
+  );
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/*ADICIONAR ALUNO E DEPARTAMENTO*/
+
+.form-control,
+.form-select {
+  border: 1px solid #198754;
+  height: 45px;
+}
+
+
+
+/*CONFIGURAÇÕES DA TABELA*/
+/* No teu CSS (ex: App.css) */
+.table-spacing th {
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+}
+
+/* Espaço entre colunas */
+.table-spacing thead tr {
+  border-spacing: 0.5rem; /* ou 8px */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.table th,
+.table td {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* HOMEPAGE */
+.ajuste {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/img/Fundo.jpg'); /* Substitua pelo caminho correto */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.login-overlay {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9); /* fundo claro para o formulário */
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4); /* camada branca transparente */
+  z-index: 1;
+}
+
+.login-form-container {
+  width: 100%;
+}
+
+/* CSS para ocultar texto a mais na UserList*/
+.truncate-text {
+  white-space: nowrap; /* faz com que o texto fique todo numa só linha*/
+  overflow: hidden; /* esconde o texto que iria passar do tamanho da coluna */
+  text-overflow: ellipsis; /* adiciona as reticências no final quando o 'overflow' ocorre */
+} 
+
+
+/* CSS CANDIDATOS*/
+.card-custom {
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  background: white;
+}
+
+.form-control,
+.form-select {
+  border-radius: 50px;
+  border: 2px solid #00b383;
+}
+
+#scroll {
+  max-height: 285px;
+  overflow-y: auto;
+}
+
+.card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.proposta-ativa {
+  background-color: #4CBA7B;
+  object-fit: cover;
+}
+
+.altura-fixa {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.borda-scroll {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.hero-section {
+  background-image: url("/img/labor-union-members-working-together 1.png");
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-title {
+  margin-top: 230px;
+}
+
+.searchbar-container {
+  display: flex;
+  flex-wrap: nowrap; /* impede que os dropdowns quebrem para nova linha */
+  justify-content: center;
+  border-radius: 60px;
+  align-items: end !important;
+  padding: 2rem 1rem 1.5rem 1rem !important;
+  background-color: white !important;
+  max-width: 1200px; /* aumenta para caber tudo numa linha */
+  margin: 0 auto;
+  gap: 30px;
+  margin-top: 150px;
+border-radius: 50px 50px 0 0;
+}
+
+
+.botao-arredondado {
+  border-radius: 50px;
+  font-weight: 600;
+  background: linear-gradient(to right, #4CBA7B, #1F9588);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  height: 45px; /* altura consistente */
+  padding: 0 2rem;
+  width: 200px;
+}
+
+.botao-arredondado:hover {
+  background: #3cae6e;
+  transform: scale(1.05);
+}
+
+
+.title {
+  color: white !important;
+  text-align: center;
+  padding: 1rem 1rem !important;
+}
+
+.descricao {
+  padding: 3rem 3rem !important;
+  font-size: 18px;
+  width: 70%;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.match {
+  padding: 1rem 7rem !important;
+}
+
+
+/*Css Remover contas*/
+.remover-tabela {
+  width: 100%;
+  border-collapse: separate; /* Altere de collapse para separate */
+  border-spacing: 10px; /* Espaço entre colunas e linhas */
+  table-layout: fixed; /* Para manter alinhamento */
+}
+
+
+.remover-tabela thead th.header-black {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.remover-tabela thead th {
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+}
+
+.remover-tabela tbody td {
+  background-color: #f9f9f9;
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+  color: white;
+  border-radius: 25px;
+  padding: 6px 18px;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-eliminar:hover {
+  background-color: #bb2d3b;
+}
+main {
+  margin-top: 100px;
+}
